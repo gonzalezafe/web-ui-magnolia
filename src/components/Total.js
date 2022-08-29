@@ -3,6 +3,7 @@ import accounting from 'accounting'
 import React from 'react'
 
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +27,9 @@ const Total = () => {
         <div className={classes.root}>
             <h5>Cantidad de productos: {cartQuantity}</h5>
             <h5> {accounting.formatMoney(total, '$')} </h5>
-            <Button className={classes.button} variant='contained' color='secondary'> Ir a Pagar </Button>
+            <Link to='/checkout'>
+              <Button className={classes.button} variant='contained' color='secondary'> Ir a Pagar </Button>
+            </Link>
         </div>
     )
 }

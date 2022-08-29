@@ -6,9 +6,16 @@ import Navbar from './components/Navbar';
 import Products from './components/Products';
 
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom'
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import Checkout from './components/CheckoutForm/Checkout';
+
 
 
 function App() {
+
+  
+
   return (
     <Router>
       <>
@@ -16,7 +23,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element= {<Products />}/>
-          <Route path='checkout-page' element= {<CheckoutPage/>}/>            
+          <Route path='/checkout-page' element= {<CheckoutPage/>}/>
+          <Route path='/signin' element= {<SignIn/>}/>
+          <Route path='/signup' element= {<SignUp/>}/>
+          <Route path='/checkout' element= {<Checkout/>}/>
         </Routes>
       </div>
       </>
